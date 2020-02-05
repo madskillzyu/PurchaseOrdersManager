@@ -106,10 +106,24 @@
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonSacuvaj = new System.Windows.Forms.Button();
             this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
+            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn7 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn8 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1PregledUnos.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -846,12 +860,116 @@
             this.checkBox1EnableEdit.Text = "Omogući Izmene";
             this.checkBox1EnableEdit.UseVisualStyleBackColor = true;
             // 
+            // objectListView1
+            // 
+            this.objectListView1.AllColumns.Add(this.ID);
+            this.objectListView1.AllColumns.Add(this.olvColumn1);
+            this.objectListView1.AllColumns.Add(this.olvColumn2);
+            this.objectListView1.AllColumns.Add(this.olvColumn3);
+            this.objectListView1.AllColumns.Add(this.olvColumn4);
+            this.objectListView1.AllColumns.Add(this.olvColumn5);
+            this.objectListView1.AllColumns.Add(this.olvColumn6);
+            this.objectListView1.AllColumns.Add(this.olvColumn7);
+            this.objectListView1.AllColumns.Add(this.olvColumn8);
+            this.objectListView1.AllColumns.Add(this.olvColumn9);
+            this.objectListView1.AllColumns.Add(this.olvColumn10);
+            this.objectListView1.AllColumns.Add(this.olvColumn11);
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.olvColumn1,
+            this.olvColumn2,
+            this.olvColumn3,
+            this.olvColumn4,
+            this.olvColumn5,
+            this.olvColumn6,
+            this.olvColumn7,
+            this.olvColumn8,
+            this.olvColumn9,
+            this.olvColumn10,
+            this.olvColumn11});
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectListView1.FullRowSelect = true;
+            this.objectListView1.GridLines = true;
+            this.objectListView1.HideSelection = false;
+            this.objectListView1.Location = new System.Drawing.Point(0, 24);
+            this.objectListView1.MultiSelect = false;
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(1098, 763);
+            this.objectListView1.TabIndex = 5;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.AspectName = "ID";
+            this.ID.Text = "ID";
+            // 
+            // olvColumn1
+            // 
+            this.olvColumn1.AspectName = "DatumNarudzbenice";
+            this.olvColumn1.Text = "DatumNarudzbenice";
+            // 
+            // olvColumn2
+            // 
+            this.olvColumn2.AspectName = "DatumIstekaRokaNarudzbenice";
+            this.olvColumn2.Text = "DatumIstekaRokaNarudzbenice";
+            // 
+            // olvColumn3
+            // 
+            this.olvColumn3.AspectName = "OkvirniSporazum";
+            this.olvColumn3.Text = "OkvirniSporazum";
+            // 
+            // olvColumn4
+            // 
+            this.olvColumn4.AspectName = "Ogranak";
+            this.olvColumn4.Text = "Ogranak";
+            // 
+            // olvColumn5
+            // 
+            this.olvColumn5.AspectName = "NazivTrafostanice";
+            this.olvColumn5.Text = "NazivTrafostanice";
+            // 
+            // olvColumn6
+            // 
+            this.olvColumn6.AspectName = "DatumFakture";
+            this.olvColumn6.Text = "DatumFakture";
+            // 
+            // olvColumn7
+            // 
+            this.olvColumn7.AspectName = "BrojFakture";
+            this.olvColumn7.Text = "BrojFakture";
+            // 
+            // olvColumn8
+            // 
+            this.olvColumn8.AspectName = "IznosBezPDV";
+            this.olvColumn8.Text = "IznosBezPDV";
+            // 
+            // olvColumn9
+            // 
+            this.olvColumn9.AspectName = "DatumPrijemEPS";
+            this.olvColumn9.Text = "DatumPrijemEPS";
+            // 
+            // olvColumn10
+            // 
+            this.olvColumn10.AspectName = "BrojIzvestaja";
+            this.olvColumn10.Text = "BrojIzvestaja";
+            // 
+            // olvColumn11
+            // 
+            this.olvColumn11.AspectName = "Napomena";
+            this.olvColumn11.FillsFreeSpace = true;
+            this.olvColumn11.Text = "Napomena";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1593, 809);
+            this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.tabControl1PregledUnos);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -867,6 +985,7 @@
             this.tabControl1PregledUnos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -951,6 +1070,19 @@
         private System.Windows.Forms.Label labelBrojNarudzbenice;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.Button buttonSacuvaj;
+        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private BrightIdeasSoftware.OLVColumn ID;
+        private BrightIdeasSoftware.OLVColumn olvColumn1;
+        private BrightIdeasSoftware.OLVColumn olvColumn2;
+        private BrightIdeasSoftware.OLVColumn olvColumn3;
+        private BrightIdeasSoftware.OLVColumn olvColumn4;
+        private BrightIdeasSoftware.OLVColumn olvColumn5;
+        private BrightIdeasSoftware.OLVColumn olvColumn6;
+        private BrightIdeasSoftware.OLVColumn olvColumn7;
+        private BrightIdeasSoftware.OLVColumn olvColumn8;
+        private BrightIdeasSoftware.OLVColumn olvColumn9;
+        private BrightIdeasSoftware.OLVColumn olvColumn10;
+        private BrightIdeasSoftware.OLVColumn olvColumn11;
     }
 }
 
