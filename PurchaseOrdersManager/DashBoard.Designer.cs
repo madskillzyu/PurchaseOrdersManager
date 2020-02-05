@@ -64,8 +64,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.tabControl1PregledUnos = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2Statistika = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tabControl1PregledUnos.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -330,12 +334,46 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 16);
             // 
+            // tabControl1PregledUnos
+            // 
+            this.tabControl1PregledUnos.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1PregledUnos.Controls.Add(this.tabPage1);
+            this.tabControl1PregledUnos.Controls.Add(this.tabPage2Statistika);
+            this.tabControl1PregledUnos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tabControl1PregledUnos.ItemSize = new System.Drawing.Size(82, 18);
+            this.tabControl1PregledUnos.Location = new System.Drawing.Point(1098, 24);
+            this.tabControl1PregledUnos.Name = "tabControl1PregledUnos";
+            this.tabControl1PregledUnos.SelectedIndex = 0;
+            this.tabControl1PregledUnos.Size = new System.Drawing.Size(495, 763);
+            this.tabControl1PregledUnos.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(487, 737);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Pregled/Unos";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2Statistika
+            // 
+            this.tabPage2Statistika.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2Statistika.Name = "tabPage2Statistika";
+            this.tabPage2Statistika.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2Statistika.Size = new System.Drawing.Size(487, 737);
+            this.tabPage2Statistika.TabIndex = 1;
+            this.tabPage2Statistika.Text = "Statistika";
+            this.tabPage2Statistika.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1593, 809);
+            this.Controls.Add(this.tabControl1PregledUnos);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,6 +385,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tabControl1PregledUnos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,6 +429,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.TabControl tabControl1PregledUnos;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2Statistika;
     }
 }
 
