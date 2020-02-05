@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.podešavanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filteriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,12 +126,39 @@
             this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonSacuvaj = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ovogMesecaLabel = new System.Windows.Forms.Label();
+            this.ukupnoLabel = new System.Windows.Forms.Label();
+            this.neodradjeneLabel = new System.Windows.Forms.Label();
+            this.odradjeneLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.thirdDividerLabel = new System.Windows.Forms.Label();
+            this.headerStatistikaSve = new System.Windows.Forms.Label();
+            this.secondDividerLabel = new System.Windows.Forms.Label();
+            this.headerStatistikaLabel = new System.Windows.Forms.Label();
+            this.firstDividerLabel = new System.Windows.Forms.Label();
+            this.ukupanBrNarudzOvogMeseca = new System.Windows.Forms.Label();
+            this.ukupanBrojNarudzUBazi = new System.Windows.Forms.Label();
+            this.brojNepopunjenihNarudz = new System.Windows.Forms.Label();
+            this.brojPopunjenihNarudzbenica = new System.Windows.Forms.Label();
+            this.korisnikLabelaStatistika = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1PregledUnos.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2Statistika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.panel1IzaIZmeniSacuvajDugmeta.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -451,6 +484,8 @@
             // 
             // tabPage2Statistika
             // 
+            this.tabPage2Statistika.Controls.Add(this.splitContainer1);
+            this.tabPage2Statistika.Controls.Add(this.panel2);
             this.tabPage2Statistika.Location = new System.Drawing.Point(4, 4);
             this.tabPage2Statistika.Name = "tabPage2Statistika";
             this.tabPage2Statistika.Padding = new System.Windows.Forms.Padding(3);
@@ -974,6 +1009,237 @@
             this.buttonSacuvaj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSacuvaj.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ovogMesecaLabel);
+            this.panel2.Controls.Add(this.ukupnoLabel);
+            this.panel2.Controls.Add(this.neodradjeneLabel);
+            this.panel2.Controls.Add(this.odradjeneLabel);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.thirdDividerLabel);
+            this.panel2.Controls.Add(this.headerStatistikaSve);
+            this.panel2.Controls.Add(this.secondDividerLabel);
+            this.panel2.Controls.Add(this.headerStatistikaLabel);
+            this.panel2.Controls.Add(this.firstDividerLabel);
+            this.panel2.Controls.Add(this.ukupanBrNarudzOvogMeseca);
+            this.panel2.Controls.Add(this.ukupanBrojNarudzUBazi);
+            this.panel2.Controls.Add(this.brojNepopunjenihNarudz);
+            this.panel2.Controls.Add(this.brojPopunjenihNarudzbenica);
+            this.panel2.Controls.Add(this.korisnikLabelaStatistika);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(481, 186);
+            this.panel2.TabIndex = 1;
+            // 
+            // ovogMesecaLabel
+            // 
+            this.ovogMesecaLabel.AutoSize = true;
+            this.ovogMesecaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ovogMesecaLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.ovogMesecaLabel.Location = new System.Drawing.Point(384, 129);
+            this.ovogMesecaLabel.Name = "ovogMesecaLabel";
+            this.ovogMesecaLabel.Size = new System.Drawing.Size(97, 21);
+            this.ovogMesecaLabel.TabIndex = 14;
+            this.ovogMesecaLabel.Text = "ovogMeseca";
+            // 
+            // ukupnoLabel
+            // 
+            this.ukupnoLabel.AutoSize = true;
+            this.ukupnoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ukupnoLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.ukupnoLabel.Location = new System.Drawing.Point(384, 108);
+            this.ukupnoLabel.Name = "ukupnoLabel";
+            this.ukupnoLabel.Size = new System.Drawing.Size(63, 21);
+            this.ukupnoLabel.TabIndex = 13;
+            this.ukupnoLabel.Text = "ukupno";
+            // 
+            // neodradjeneLabel
+            // 
+            this.neodradjeneLabel.AutoSize = true;
+            this.neodradjeneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.neodradjeneLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.neodradjeneLabel.Location = new System.Drawing.Point(384, 87);
+            this.neodradjeneLabel.Name = "neodradjeneLabel";
+            this.neodradjeneLabel.Size = new System.Drawing.Size(97, 21);
+            this.neodradjeneLabel.TabIndex = 12;
+            this.neodradjeneLabel.Text = "neodradjene";
+            // 
+            // odradjeneLabel
+            // 
+            this.odradjeneLabel.AutoSize = true;
+            this.odradjeneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.odradjeneLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.odradjeneLabel.Location = new System.Drawing.Point(384, 66);
+            this.odradjeneLabel.Name = "odradjeneLabel";
+            this.odradjeneLabel.Size = new System.Drawing.Size(80, 21);
+            this.odradjeneLabel.TabIndex = 11;
+            this.odradjeneLabel.Text = "odradjene";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(196, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Graficki prikaz statusa narudzbenica.";
+            // 
+            // thirdDividerLabel
+            // 
+            this.thirdDividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.thirdDividerLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thirdDividerLabel.Location = new System.Drawing.Point(3, 173);
+            this.thirdDividerLabel.Name = "thirdDividerLabel";
+            this.thirdDividerLabel.Size = new System.Drawing.Size(467, 10);
+            this.thirdDividerLabel.TabIndex = 9;
+            // 
+            // headerStatistikaSve
+            // 
+            this.headerStatistikaSve.AutoSize = true;
+            this.headerStatistikaSve.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerStatistikaSve.Location = new System.Drawing.Point(6, 43);
+            this.headerStatistikaSve.Name = "headerStatistikaSve";
+            this.headerStatistikaSve.Size = new System.Drawing.Size(124, 13);
+            this.headerStatistikaSve.TabIndex = 8;
+            this.headerStatistikaSve.Text = "Statistika Narudbenica";
+            // 
+            // secondDividerLabel
+            // 
+            this.secondDividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.secondDividerLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondDividerLabel.Location = new System.Drawing.Point(8, 56);
+            this.secondDividerLabel.Name = "secondDividerLabel";
+            this.secondDividerLabel.Size = new System.Drawing.Size(467, 10);
+            this.secondDividerLabel.TabIndex = 7;
+            // 
+            // headerStatistikaLabel
+            // 
+            this.headerStatistikaLabel.AutoSize = true;
+            this.headerStatistikaLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerStatistikaLabel.Location = new System.Drawing.Point(6, 0);
+            this.headerStatistikaLabel.Name = "headerStatistikaLabel";
+            this.headerStatistikaLabel.Size = new System.Drawing.Size(54, 13);
+            this.headerStatistikaLabel.TabIndex = 6;
+            this.headerStatistikaLabel.Text = "Statistika";
+            // 
+            // firstDividerLabel
+            // 
+            this.firstDividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.firstDividerLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstDividerLabel.Location = new System.Drawing.Point(8, 13);
+            this.firstDividerLabel.Name = "firstDividerLabel";
+            this.firstDividerLabel.Size = new System.Drawing.Size(467, 10);
+            this.firstDividerLabel.TabIndex = 5;
+            // 
+            // ukupanBrNarudzOvogMeseca
+            // 
+            this.ukupanBrNarudzOvogMeseca.AutoSize = true;
+            this.ukupanBrNarudzOvogMeseca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ukupanBrNarudzOvogMeseca.ForeColor = System.Drawing.Color.DarkCyan;
+            this.ukupanBrNarudzOvogMeseca.Location = new System.Drawing.Point(4, 129);
+            this.ukupanBrNarudzOvogMeseca.Name = "ukupanBrNarudzOvogMeseca";
+            this.ukupanBrNarudzOvogMeseca.Size = new System.Drawing.Size(329, 21);
+            this.ukupanBrNarudzOvogMeseca.TabIndex = 4;
+            this.ukupanBrNarudzOvogMeseca.Text = "Ukupan broj narudbenica unetih ovog meseca";
+            // 
+            // ukupanBrojNarudzUBazi
+            // 
+            this.ukupanBrojNarudzUBazi.AutoSize = true;
+            this.ukupanBrojNarudzUBazi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ukupanBrojNarudzUBazi.ForeColor = System.Drawing.Color.DarkCyan;
+            this.ukupanBrojNarudzUBazi.Location = new System.Drawing.Point(5, 108);
+            this.ukupanBrojNarudzUBazi.Name = "ukupanBrojNarudzUBazi";
+            this.ukupanBrojNarudzUBazi.Size = new System.Drawing.Size(231, 21);
+            this.ukupanBrojNarudzUBazi.TabIndex = 3;
+            this.ukupanBrojNarudzUBazi.Text = "Ukupan broj narudbenica u bazi";
+            // 
+            // brojNepopunjenihNarudz
+            // 
+            this.brojNepopunjenihNarudz.AutoSize = true;
+            this.brojNepopunjenihNarudz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojNepopunjenihNarudz.ForeColor = System.Drawing.Color.DarkCyan;
+            this.brojNepopunjenihNarudz.Location = new System.Drawing.Point(4, 87);
+            this.brojNepopunjenihNarudz.Name = "brojNepopunjenihNarudz";
+            this.brojNepopunjenihNarudz.Size = new System.Drawing.Size(255, 21);
+            this.brojNepopunjenihNarudz.TabIndex = 2;
+            this.brojNepopunjenihNarudz.Text = "Koliko je neodradjenih narudbenica";
+            // 
+            // brojPopunjenihNarudzbenica
+            // 
+            this.brojPopunjenihNarudzbenica.AutoSize = true;
+            this.brojPopunjenihNarudzbenica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojPopunjenihNarudzbenica.ForeColor = System.Drawing.Color.DarkCyan;
+            this.brojPopunjenihNarudzbenica.Location = new System.Drawing.Point(4, 66);
+            this.brojPopunjenihNarudzbenica.Name = "brojPopunjenihNarudzbenica";
+            this.brojPopunjenihNarudzbenica.Size = new System.Drawing.Size(248, 21);
+            this.brojPopunjenihNarudzbenica.TabIndex = 1;
+            this.brojPopunjenihNarudzbenica.Text = "Koliko je odradjenih nadudzbenica";
+            // 
+            // korisnikLabelaStatistika
+            // 
+            this.korisnikLabelaStatistika.AutoSize = true;
+            this.korisnikLabelaStatistika.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.korisnikLabelaStatistika.ForeColor = System.Drawing.Color.DarkCyan;
+            this.korisnikLabelaStatistika.Location = new System.Drawing.Point(4, 22);
+            this.korisnikLabelaStatistika.Name = "korisnikLabelaStatistika";
+            this.korisnikLabelaStatistika.Size = new System.Drawing.Size(320, 21);
+            this.korisnikLabelaStatistika.TabIndex = 0;
+            this.korisnikLabelaStatistika.Text = "Informacije obroju unosa od strane korisnika";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 189);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.chart1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.chart2);
+            this.splitContainer1.Size = new System.Drawing.Size(481, 545);
+            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(481, 265);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(0, 0);
+            this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(481, 276);
+            this.chart2.TabIndex = 0;
+            this.chart2.Text = "chart2";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -996,9 +1262,18 @@
             this.tabControl1PregledUnos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2Statistika.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.panel1IzaIZmeniSacuvajDugmeta.ResumeLayout(false);
             this.panel1IzaIZmeniSacuvajDugmeta.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1097,6 +1372,25 @@
         private System.Windows.Forms.CheckBox checkBox1EnableEdit;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.Button buttonSacuvaj;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label ovogMesecaLabel;
+        private System.Windows.Forms.Label ukupnoLabel;
+        private System.Windows.Forms.Label neodradjeneLabel;
+        private System.Windows.Forms.Label odradjeneLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label thirdDividerLabel;
+        private System.Windows.Forms.Label headerStatistikaSve;
+        private System.Windows.Forms.Label secondDividerLabel;
+        private System.Windows.Forms.Label headerStatistikaLabel;
+        private System.Windows.Forms.Label firstDividerLabel;
+        private System.Windows.Forms.Label ukupanBrNarudzOvogMeseca;
+        private System.Windows.Forms.Label ukupanBrojNarudzUBazi;
+        private System.Windows.Forms.Label brojNepopunjenihNarudz;
+        private System.Windows.Forms.Label brojPopunjenihNarudzbenica;
+        private System.Windows.Forms.Label korisnikLabelaStatistika;
     }
 }
 
