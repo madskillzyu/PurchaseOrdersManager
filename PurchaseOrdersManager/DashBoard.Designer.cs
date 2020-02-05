@@ -69,7 +69,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2Statistika = new System.Windows.Forms.TabPage();
             this.buttonUcitajPonovo = new System.Windows.Forms.Button();
-            this.EnableNewITem = new System.Windows.Forms.CheckBox();
             this.okvirniSporazumValue = new System.Windows.Forms.ComboBox();
             this.checkBoxIzvestajPoslat = new System.Windows.Forms.CheckBox();
             this.datumPrijemaValue = new System.Windows.Forms.DateTimePicker();
@@ -103,9 +102,6 @@
             this.labelDatumIstRokaNarudz = new System.Windows.Forms.Label();
             this.labelDatumNarudzbenice = new System.Windows.Forms.Label();
             this.labelBrojNarudzbenice = new System.Windows.Forms.Label();
-            this.buttonIzmeni = new System.Windows.Forms.Button();
-            this.buttonSacuvaj = new System.Windows.Forms.Button();
-            this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
             this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -119,11 +115,17 @@
             this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.panel1IzaIZmeniSacuvajDugmeta = new System.Windows.Forms.Panel();
+            this.EnableNewITem = new System.Windows.Forms.CheckBox();
+            this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
+            this.buttonIzmeni = new System.Windows.Forms.Button();
+            this.buttonSacuvaj = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1PregledUnos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            this.panel1IzaIZmeniSacuvajDugmeta.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -404,12 +406,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel1IzaIZmeniSacuvajDugmeta);
             this.tabPage1.Controls.Add(this.buttonUcitajPonovo);
             this.tabPage1.Controls.Add(this.okvirniSporazumValue);
             this.tabPage1.Controls.Add(this.checkBoxIzvestajPoslat);
-            this.tabPage1.Controls.Add(this.EnableNewITem);
             this.tabPage1.Controls.Add(this.datumPrijemaValue);
-            this.tabPage1.Controls.Add(this.checkBox1EnableEdit);
             this.tabPage1.Controls.Add(this.buttonPrimopredajniObrazac);
             this.tabPage1.Controls.Add(this.buttonZapisnik);
             this.tabPage1.Controls.Add(this.buttonFaktura);
@@ -440,8 +441,6 @@
             this.tabPage1.Controls.Add(this.labelDatumIstRokaNarudz);
             this.tabPage1.Controls.Add(this.labelDatumNarudzbenice);
             this.tabPage1.Controls.Add(this.labelBrojNarudzbenice);
-            this.tabPage1.Controls.Add(this.buttonIzmeni);
-            this.tabPage1.Controls.Add(this.buttonSacuvaj);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -473,17 +472,6 @@
             this.buttonUcitajPonovo.Text = "Ucitaj ponovo";
             this.buttonUcitajPonovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUcitajPonovo.UseVisualStyleBackColor = true;
-            // 
-            // EnableNewITem
-            // 
-            this.EnableNewITem.AutoSize = true;
-            this.EnableNewITem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnableNewITem.Location = new System.Drawing.Point(284, 637);
-            this.EnableNewITem.Name = "EnableNewITem";
-            this.EnableNewITem.Size = new System.Drawing.Size(167, 24);
-            this.EnableNewITem.TabIndex = 147;
-            this.EnableNewITem.Text = "Omogući Novi Unos";
-            this.EnableNewITem.UseVisualStyleBackColor = true;
             // 
             // okvirniSporazumValue
             // 
@@ -821,45 +809,6 @@
             this.labelBrojNarudzbenice.TabIndex = 163;
             this.labelBrojNarudzbenice.Text = "Broj Narudžbenice";
             // 
-            // buttonIzmeni
-            // 
-            this.buttonIzmeni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIzmeni.Image = ((System.Drawing.Image)(resources.GetObject("buttonIzmeni.Image")));
-            this.buttonIzmeni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonIzmeni.Location = new System.Drawing.Point(47, 667);
-            this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(194, 64);
-            this.buttonIzmeni.TabIndex = 149;
-            this.buttonIzmeni.Text = "Izmeni Narudžbenicu";
-            this.buttonIzmeni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonIzmeni.UseVisualStyleBackColor = true;
-            // 
-            // buttonSacuvaj
-            // 
-            this.buttonSacuvaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSacuvaj.Image = ((System.Drawing.Image)(resources.GetObject("buttonSacuvaj.Image")));
-            this.buttonSacuvaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSacuvaj.Location = new System.Drawing.Point(257, 667);
-            this.buttonSacuvaj.Name = "buttonSacuvaj";
-            this.buttonSacuvaj.Size = new System.Drawing.Size(194, 64);
-            this.buttonSacuvaj.TabIndex = 146;
-            this.buttonSacuvaj.Text = "Sačuvaj Narudžbenicu";
-            this.buttonSacuvaj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSacuvaj.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1EnableEdit
-            // 
-            this.checkBox1EnableEdit.AutoSize = true;
-            this.checkBox1EnableEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1EnableEdit.Location = new System.Drawing.Point(47, 637);
-            this.checkBox1EnableEdit.Name = "checkBox1EnableEdit";
-            this.checkBox1EnableEdit.Size = new System.Drawing.Size(148, 24);
-            this.checkBox1EnableEdit.TabIndex = 180;
-            this.checkBox1EnableEdit.Text = "Omogući Izmene";
-            this.checkBox1EnableEdit.UseVisualStyleBackColor = true;
-            // 
             // objectListView1
             // 
             this.objectListView1.AllColumns.Add(this.ID);
@@ -963,6 +912,68 @@
             this.olvColumn11.FillsFreeSpace = true;
             this.olvColumn11.Text = "Napomena";
             // 
+            // panel1IzaIZmeniSacuvajDugmeta
+            // 
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.EnableNewITem);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.checkBox1EnableEdit);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonIzmeni);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonSacuvaj);
+            this.panel1IzaIZmeniSacuvajDugmeta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1IzaIZmeniSacuvajDugmeta.Location = new System.Drawing.Point(3, 634);
+            this.panel1IzaIZmeniSacuvajDugmeta.Name = "panel1IzaIZmeniSacuvajDugmeta";
+            this.panel1IzaIZmeniSacuvajDugmeta.Size = new System.Drawing.Size(481, 100);
+            this.panel1IzaIZmeniSacuvajDugmeta.TabIndex = 183;
+            // 
+            // EnableNewITem
+            // 
+            this.EnableNewITem.AutoSize = true;
+            this.EnableNewITem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnableNewITem.Location = new System.Drawing.Point(275, 3);
+            this.EnableNewITem.Name = "EnableNewITem";
+            this.EnableNewITem.Size = new System.Drawing.Size(167, 24);
+            this.EnableNewITem.TabIndex = 182;
+            this.EnableNewITem.Text = "Omogući Novi Unos";
+            this.EnableNewITem.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1EnableEdit
+            // 
+            this.checkBox1EnableEdit.AutoSize = true;
+            this.checkBox1EnableEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1EnableEdit.Location = new System.Drawing.Point(38, 3);
+            this.checkBox1EnableEdit.Name = "checkBox1EnableEdit";
+            this.checkBox1EnableEdit.Size = new System.Drawing.Size(148, 24);
+            this.checkBox1EnableEdit.TabIndex = 184;
+            this.checkBox1EnableEdit.Text = "Omogući Izmene";
+            this.checkBox1EnableEdit.UseVisualStyleBackColor = true;
+            // 
+            // buttonIzmeni
+            // 
+            this.buttonIzmeni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIzmeni.Image = ((System.Drawing.Image)(resources.GetObject("buttonIzmeni.Image")));
+            this.buttonIzmeni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonIzmeni.Location = new System.Drawing.Point(38, 33);
+            this.buttonIzmeni.Name = "buttonIzmeni";
+            this.buttonIzmeni.Size = new System.Drawing.Size(194, 64);
+            this.buttonIzmeni.TabIndex = 183;
+            this.buttonIzmeni.Text = "Izmeni Narudžbenicu";
+            this.buttonIzmeni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonIzmeni.UseVisualStyleBackColor = true;
+            // 
+            // buttonSacuvaj
+            // 
+            this.buttonSacuvaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSacuvaj.Image = ((System.Drawing.Image)(resources.GetObject("buttonSacuvaj.Image")));
+            this.buttonSacuvaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSacuvaj.Location = new System.Drawing.Point(248, 33);
+            this.buttonSacuvaj.Name = "buttonSacuvaj";
+            this.buttonSacuvaj.Size = new System.Drawing.Size(194, 64);
+            this.buttonSacuvaj.TabIndex = 181;
+            this.buttonSacuvaj.Text = "Sačuvaj Narudžbenicu";
+            this.buttonSacuvaj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSacuvaj.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -986,6 +997,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.panel1IzaIZmeniSacuvajDugmeta.ResumeLayout(false);
+            this.panel1IzaIZmeniSacuvajDugmeta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1035,9 +1048,7 @@
         private System.Windows.Forms.Button buttonUcitajPonovo;
         private System.Windows.Forms.ComboBox okvirniSporazumValue;
         private System.Windows.Forms.CheckBox checkBoxIzvestajPoslat;
-        private System.Windows.Forms.CheckBox EnableNewITem;
         private System.Windows.Forms.DateTimePicker datumPrijemaValue;
-        private System.Windows.Forms.CheckBox checkBox1EnableEdit;
         private System.Windows.Forms.Button buttonPrimopredajniObrazac;
         private System.Windows.Forms.Button buttonZapisnik;
         private System.Windows.Forms.Button buttonFaktura;
@@ -1068,8 +1079,6 @@
         private System.Windows.Forms.Label labelDatumIstRokaNarudz;
         private System.Windows.Forms.Label labelDatumNarudzbenice;
         private System.Windows.Forms.Label labelBrojNarudzbenice;
-        private System.Windows.Forms.Button buttonIzmeni;
-        private System.Windows.Forms.Button buttonSacuvaj;
         private BrightIdeasSoftware.ObjectListView objectListView1;
         private BrightIdeasSoftware.OLVColumn ID;
         private BrightIdeasSoftware.OLVColumn olvColumn1;
@@ -1083,6 +1092,11 @@
         private BrightIdeasSoftware.OLVColumn olvColumn9;
         private BrightIdeasSoftware.OLVColumn olvColumn10;
         private BrightIdeasSoftware.OLVColumn olvColumn11;
+        private System.Windows.Forms.Panel panel1IzaIZmeniSacuvajDugmeta;
+        private System.Windows.Forms.CheckBox EnableNewITem;
+        private System.Windows.Forms.CheckBox checkBox1EnableEdit;
+        private System.Windows.Forms.Button buttonIzmeni;
+        private System.Windows.Forms.Button buttonSacuvaj;
     }
 }
 
