@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseOrdersManager", "PurchaseOrdersManager\PurchaseOrdersManager.csproj", "{F69E8108-D21C-4AA6-BBA8-F5212BC61CE7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassLibrary", "ClassLibrary", "{DD43B14D-DC2D-4437-AC55-28DF1DBB8F3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarudzbenicaModels", "NarudzbenicaModels\NarudzbenicaModels.csproj", "{4A00372E-494D-4326-B4CC-10CB73A7E45C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{F69E8108-D21C-4AA6-BBA8-F5212BC61CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F69E8108-D21C-4AA6-BBA8-F5212BC61CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F69E8108-D21C-4AA6-BBA8-F5212BC61CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A00372E-494D-4326-B4CC-10CB73A7E45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A00372E-494D-4326-B4CC-10CB73A7E45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A00372E-494D-4326-B4CC-10CB73A7E45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A00372E-494D-4326-B4CC-10CB73A7E45C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A00372E-494D-4326-B4CC-10CB73A7E45C} = {DD43B14D-DC2D-4437-AC55-28DF1DBB8F3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C1A446D-B8A7-4345-AEE0-6C5EBAEEA654}
