@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -37,13 +38,12 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.podešavanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filteriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontrolaNalogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izmeniPutanjuDoBazeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izmeniPutanjuDoFajlovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istorijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filteriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neStarijeOd45DanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neStarijeOd60DanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mesecToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +66,7 @@
             this.sveZaTekućuGodinuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sveOdPrvogUnosaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiGrupeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -73,7 +74,11 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.tabControl1PregledUnos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2Statistika = new System.Windows.Forms.TabPage();
+            this.panel1IzaIZmeniSacuvajDugmeta = new System.Windows.Forms.Panel();
+            this.EnableNewITem = new System.Windows.Forms.CheckBox();
+            this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
+            this.buttonIzmeni = new System.Windows.Forms.Button();
+            this.buttonSacuvaj = new System.Windows.Forms.Button();
             this.buttonUcitajPonovo = new System.Windows.Forms.Button();
             this.okvirniSporazumValue = new System.Windows.Forms.ComboBox();
             this.checkBoxIzvestajPoslat = new System.Windows.Forms.CheckBox();
@@ -108,24 +113,10 @@
             this.labelDatumIstRokaNarudz = new System.Windows.Forms.Label();
             this.labelDatumNarudzbenice = new System.Windows.Forms.Label();
             this.labelBrojNarudzbenice = new System.Windows.Forms.Label();
-            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
-            this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn7 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn8 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.panel1IzaIZmeniSacuvajDugmeta = new System.Windows.Forms.Panel();
-            this.EnableNewITem = new System.Windows.Forms.CheckBox();
-            this.checkBox1EnableEdit = new System.Windows.Forms.CheckBox();
-            this.buttonIzmeni = new System.Windows.Forms.Button();
-            this.buttonSacuvaj = new System.Windows.Forms.Button();
+            this.tabPage2Statistika = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ovogMesecaLabel = new System.Windows.Forms.Label();
             this.ukupnoLabel = new System.Windows.Forms.Label();
@@ -142,23 +133,39 @@
             this.brojNepopunjenihNarudz = new System.Windows.Forms.Label();
             this.brojPopunjenihNarudzbenica = new System.Windows.Forms.Label();
             this.korisnikLabelaStatistika = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn7 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn8 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn9 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn10 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumn11 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.prikazNarudzbeniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazFakturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazPrimopredajnogObrazcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1PregledUnos.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2Statistika.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.panel1IzaIZmeniSacuvajDugmeta.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.tabPage2Statistika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -183,32 +190,10 @@
             this.podešavanjaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.podešavanjaToolStripMenuItem.Text = "Podešavanja";
             // 
-            // filteriToolStripMenuItem
-            // 
-            this.filteriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.neStarijeOd45DanaToolStripMenuItem,
-            this.neStarijeOd60DanaToolStripMenuItem,
-            this.mesecToolStripMenuItem,
-            this.izvestajPoslatToolStripMenuItem,
-            this.sveToolStripMenuItem,
-            this.prikažiGrupeToolStripMenuItem});
-            this.filteriToolStripMenuItem.Name = "filteriToolStripMenuItem";
-            this.filteriToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.filteriToolStripMenuItem.Text = "Filteri";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.bugReportFeatureToolStripMenuItem});
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
             // kontrolaNalogaToolStripMenuItem
             // 
             this.kontrolaNalogaToolStripMenuItem.Name = "kontrolaNalogaToolStripMenuItem";
-            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.kontrolaNalogaToolStripMenuItem.Text = "Kontrola Naloga";
             // 
             // bazaToolStripMenuItem
@@ -217,7 +202,7 @@
             this.izmeniPutanjuDoBazeToolStripMenuItem,
             this.izmeniPutanjuDoFajlovaToolStripMenuItem});
             this.bazaToolStripMenuItem.Name = "bazaToolStripMenuItem";
-            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.bazaToolStripMenuItem.Text = "Baza";
             // 
             // izmeniPutanjuDoBazeToolStripMenuItem
@@ -235,8 +220,21 @@
             // istorijaToolStripMenuItem
             // 
             this.istorijaToolStripMenuItem.Name = "istorijaToolStripMenuItem";
-            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.istorijaToolStripMenuItem.Text = "Istorija";
+            // 
+            // filteriToolStripMenuItem
+            // 
+            this.filteriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neStarijeOd45DanaToolStripMenuItem,
+            this.neStarijeOd60DanaToolStripMenuItem,
+            this.mesecToolStripMenuItem,
+            this.izvestajPoslatToolStripMenuItem,
+            this.sveToolStripMenuItem,
+            this.prikažiGrupeToolStripMenuItem});
+            this.filteriToolStripMenuItem.Name = "filteriToolStripMenuItem";
+            this.filteriToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.filteriToolStripMenuItem.Text = "Filteri";
             // 
             // neStarijeOd45DanaToolStripMenuItem
             // 
@@ -272,73 +270,73 @@
             // januarToolStripMenuItem
             // 
             this.januarToolStripMenuItem.Name = "januarToolStripMenuItem";
-            this.januarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.januarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.januarToolStripMenuItem.Text = "Januar";
             // 
             // februarToolStripMenuItem
             // 
             this.februarToolStripMenuItem.Name = "februarToolStripMenuItem";
-            this.februarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.februarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.februarToolStripMenuItem.Text = "Februar";
             // 
             // martToolStripMenuItem
             // 
             this.martToolStripMenuItem.Name = "martToolStripMenuItem";
-            this.martToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.martToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.martToolStripMenuItem.Text = "Mart";
             // 
             // aprilToolStripMenuItem
             // 
             this.aprilToolStripMenuItem.Name = "aprilToolStripMenuItem";
-            this.aprilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aprilToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.aprilToolStripMenuItem.Text = "April";
             // 
             // majToolStripMenuItem
             // 
             this.majToolStripMenuItem.Name = "majToolStripMenuItem";
-            this.majToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.majToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.majToolStripMenuItem.Text = "Maj";
             // 
             // junToolStripMenuItem
             // 
             this.junToolStripMenuItem.Name = "junToolStripMenuItem";
-            this.junToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.junToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.junToolStripMenuItem.Text = "Jun";
             // 
             // julToolStripMenuItem
             // 
             this.julToolStripMenuItem.Name = "julToolStripMenuItem";
-            this.julToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.julToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.julToolStripMenuItem.Text = "Jul";
             // 
             // avgustToolStripMenuItem
             // 
             this.avgustToolStripMenuItem.Name = "avgustToolStripMenuItem";
-            this.avgustToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.avgustToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.avgustToolStripMenuItem.Text = "Avgust";
             // 
             // septembarToolStripMenuItem
             // 
             this.septembarToolStripMenuItem.Name = "septembarToolStripMenuItem";
-            this.septembarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.septembarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.septembarToolStripMenuItem.Text = "Septembar";
             // 
             // oktobarToolStripMenuItem
             // 
             this.oktobarToolStripMenuItem.Name = "oktobarToolStripMenuItem";
-            this.oktobarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oktobarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.oktobarToolStripMenuItem.Text = "Oktobar";
             // 
             // novembarToolStripMenuItem
             // 
             this.novembarToolStripMenuItem.Name = "novembarToolStripMenuItem";
-            this.novembarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novembarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.novembarToolStripMenuItem.Text = "Novembar";
             // 
             // decembarToolStripMenuItem
             // 
             this.decembarToolStripMenuItem.Name = "decembarToolStripMenuItem";
-            this.decembarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.decembarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.decembarToolStripMenuItem.Text = "Decembar";
             // 
             // izvestajPoslatToolStripMenuItem
@@ -353,13 +351,13 @@
             // jesteToolStripMenuItem
             // 
             this.jesteToolStripMenuItem.Name = "jesteToolStripMenuItem";
-            this.jesteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jesteToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.jesteToolStripMenuItem.Text = "Jeste";
             // 
             // nijeToolStripMenuItem
             // 
             this.nijeToolStripMenuItem.Name = "nijeToolStripMenuItem";
-            this.nijeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nijeToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.nijeToolStripMenuItem.Text = "Nije";
             // 
             // sveToolStripMenuItem
@@ -389,16 +387,25 @@
             this.prikažiGrupeToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.prikažiGrupeToolStripMenuItem.Text = "Prikaži grupe";
             // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.bugReportFeatureToolStripMenuItem});
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Text = "Info";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // bugReportFeatureToolStripMenuItem
             // 
             this.bugReportFeatureToolStripMenuItem.Name = "bugReportFeatureToolStripMenuItem";
-            this.bugReportFeatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bugReportFeatureToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.bugReportFeatureToolStripMenuItem.Text = "Bug Report/Feature";
             // 
             // statusStrip1
@@ -482,17 +489,67 @@
             this.tabPage1.Text = "Pregled/Unos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2Statistika
+            // panel1IzaIZmeniSacuvajDugmeta
             // 
-            this.tabPage2Statistika.Controls.Add(this.splitContainer1);
-            this.tabPage2Statistika.Controls.Add(this.panel2);
-            this.tabPage2Statistika.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2Statistika.Name = "tabPage2Statistika";
-            this.tabPage2Statistika.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2Statistika.Size = new System.Drawing.Size(487, 737);
-            this.tabPage2Statistika.TabIndex = 1;
-            this.tabPage2Statistika.Text = "Statistika";
-            this.tabPage2Statistika.UseVisualStyleBackColor = true;
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.EnableNewITem);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.checkBox1EnableEdit);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonIzmeni);
+            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonSacuvaj);
+            this.panel1IzaIZmeniSacuvajDugmeta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1IzaIZmeniSacuvajDugmeta.Location = new System.Drawing.Point(3, 634);
+            this.panel1IzaIZmeniSacuvajDugmeta.Name = "panel1IzaIZmeniSacuvajDugmeta";
+            this.panel1IzaIZmeniSacuvajDugmeta.Size = new System.Drawing.Size(481, 100);
+            this.panel1IzaIZmeniSacuvajDugmeta.TabIndex = 183;
+            // 
+            // EnableNewITem
+            // 
+            this.EnableNewITem.AutoSize = true;
+            this.EnableNewITem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnableNewITem.Location = new System.Drawing.Point(275, 3);
+            this.EnableNewITem.Name = "EnableNewITem";
+            this.EnableNewITem.Size = new System.Drawing.Size(167, 24);
+            this.EnableNewITem.TabIndex = 182;
+            this.EnableNewITem.Text = "Omogući Novi Unos";
+            this.EnableNewITem.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1EnableEdit
+            // 
+            this.checkBox1EnableEdit.AutoSize = true;
+            this.checkBox1EnableEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1EnableEdit.Location = new System.Drawing.Point(38, 3);
+            this.checkBox1EnableEdit.Name = "checkBox1EnableEdit";
+            this.checkBox1EnableEdit.Size = new System.Drawing.Size(148, 24);
+            this.checkBox1EnableEdit.TabIndex = 184;
+            this.checkBox1EnableEdit.Text = "Omogući Izmene";
+            this.checkBox1EnableEdit.UseVisualStyleBackColor = true;
+            // 
+            // buttonIzmeni
+            // 
+            this.buttonIzmeni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIzmeni.Image = ((System.Drawing.Image)(resources.GetObject("buttonIzmeni.Image")));
+            this.buttonIzmeni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonIzmeni.Location = new System.Drawing.Point(38, 33);
+            this.buttonIzmeni.Name = "buttonIzmeni";
+            this.buttonIzmeni.Size = new System.Drawing.Size(194, 64);
+            this.buttonIzmeni.TabIndex = 183;
+            this.buttonIzmeni.Text = "Izmeni Narudžbenicu";
+            this.buttonIzmeni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonIzmeni.UseVisualStyleBackColor = true;
+            // 
+            // buttonSacuvaj
+            // 
+            this.buttonSacuvaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSacuvaj.Image = ((System.Drawing.Image)(resources.GetObject("buttonSacuvaj.Image")));
+            this.buttonSacuvaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSacuvaj.Location = new System.Drawing.Point(248, 33);
+            this.buttonSacuvaj.Name = "buttonSacuvaj";
+            this.buttonSacuvaj.Size = new System.Drawing.Size(194, 64);
+            this.buttonSacuvaj.TabIndex = 181;
+            this.buttonSacuvaj.Text = "Sačuvaj Narudžbenicu";
+            this.buttonSacuvaj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSacuvaj.UseVisualStyleBackColor = true;
             // 
             // buttonUcitajPonovo
             // 
@@ -844,170 +901,69 @@
             this.labelBrojNarudzbenice.TabIndex = 163;
             this.labelBrojNarudzbenice.Text = "Broj Narudžbenice";
             // 
-            // objectListView1
+            // tabPage2Statistika
             // 
-            this.objectListView1.AllColumns.Add(this.ID);
-            this.objectListView1.AllColumns.Add(this.olvColumn1);
-            this.objectListView1.AllColumns.Add(this.olvColumn2);
-            this.objectListView1.AllColumns.Add(this.olvColumn3);
-            this.objectListView1.AllColumns.Add(this.olvColumn4);
-            this.objectListView1.AllColumns.Add(this.olvColumn5);
-            this.objectListView1.AllColumns.Add(this.olvColumn6);
-            this.objectListView1.AllColumns.Add(this.olvColumn7);
-            this.objectListView1.AllColumns.Add(this.olvColumn8);
-            this.objectListView1.AllColumns.Add(this.olvColumn9);
-            this.objectListView1.AllColumns.Add(this.olvColumn10);
-            this.objectListView1.AllColumns.Add(this.olvColumn11);
-            this.objectListView1.CellEditUseWholeCell = false;
-            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.olvColumn1,
-            this.olvColumn2,
-            this.olvColumn3,
-            this.olvColumn4,
-            this.olvColumn5,
-            this.olvColumn6,
-            this.olvColumn7,
-            this.olvColumn8,
-            this.olvColumn9,
-            this.olvColumn10,
-            this.olvColumn11});
-            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView1.FullRowSelect = true;
-            this.objectListView1.GridLines = true;
-            this.objectListView1.HideSelection = false;
-            this.objectListView1.Location = new System.Drawing.Point(0, 24);
-            this.objectListView1.MultiSelect = false;
-            this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(1098, 763);
-            this.objectListView1.TabIndex = 5;
-            this.objectListView1.UseCompatibleStateImageBehavior = false;
-            this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.tabPage2Statistika.Controls.Add(this.splitContainer1);
+            this.tabPage2Statistika.Controls.Add(this.panel2);
+            this.tabPage2Statistika.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2Statistika.Name = "tabPage2Statistika";
+            this.tabPage2Statistika.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2Statistika.Size = new System.Drawing.Size(487, 737);
+            this.tabPage2Statistika.TabIndex = 1;
+            this.tabPage2Statistika.Text = "Statistika";
+            this.tabPage2Statistika.UseVisualStyleBackColor = true;
             // 
-            // ID
+            // splitContainer1
             // 
-            this.ID.AspectName = "ID";
-            this.ID.Text = "ID";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 189);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // olvColumn1
+            // splitContainer1.Panel1
             // 
-            this.olvColumn1.AspectName = "DatumNarudzbenice";
-            this.olvColumn1.Text = "DatumNarudzbenice";
+            this.splitContainer1.Panel1.Controls.Add(this.chart1);
             // 
-            // olvColumn2
+            // splitContainer1.Panel2
             // 
-            this.olvColumn2.AspectName = "DatumIstekaRokaNarudzbenice";
-            this.olvColumn2.Text = "DatumIstekaRokaNarudzbenice";
+            this.splitContainer1.Panel2.Controls.Add(this.chart2);
+            this.splitContainer1.Size = new System.Drawing.Size(481, 545);
+            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.TabIndex = 2;
             // 
-            // olvColumn3
+            // chart1
             // 
-            this.olvColumn3.AspectName = "OkvirniSporazum";
-            this.olvColumn3.Text = "OkvirniSporazum";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(481, 265);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
-            // olvColumn4
+            // chart2
             // 
-            this.olvColumn4.AspectName = "Ogranak";
-            this.olvColumn4.Text = "Ogranak";
-            // 
-            // olvColumn5
-            // 
-            this.olvColumn5.AspectName = "NazivTrafostanice";
-            this.olvColumn5.Text = "NazivTrafostanice";
-            // 
-            // olvColumn6
-            // 
-            this.olvColumn6.AspectName = "DatumFakture";
-            this.olvColumn6.Text = "DatumFakture";
-            // 
-            // olvColumn7
-            // 
-            this.olvColumn7.AspectName = "BrojFakture";
-            this.olvColumn7.Text = "BrojFakture";
-            // 
-            // olvColumn8
-            // 
-            this.olvColumn8.AspectName = "IznosBezPDV";
-            this.olvColumn8.Text = "IznosBezPDV";
-            // 
-            // olvColumn9
-            // 
-            this.olvColumn9.AspectName = "DatumPrijemEPS";
-            this.olvColumn9.Text = "DatumPrijemEPS";
-            // 
-            // olvColumn10
-            // 
-            this.olvColumn10.AspectName = "BrojIzvestaja";
-            this.olvColumn10.Text = "BrojIzvestaja";
-            // 
-            // olvColumn11
-            // 
-            this.olvColumn11.AspectName = "Napomena";
-            this.olvColumn11.FillsFreeSpace = true;
-            this.olvColumn11.Text = "Napomena";
-            // 
-            // panel1IzaIZmeniSacuvajDugmeta
-            // 
-            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.EnableNewITem);
-            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.checkBox1EnableEdit);
-            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonIzmeni);
-            this.panel1IzaIZmeniSacuvajDugmeta.Controls.Add(this.buttonSacuvaj);
-            this.panel1IzaIZmeniSacuvajDugmeta.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1IzaIZmeniSacuvajDugmeta.Location = new System.Drawing.Point(3, 634);
-            this.panel1IzaIZmeniSacuvajDugmeta.Name = "panel1IzaIZmeniSacuvajDugmeta";
-            this.panel1IzaIZmeniSacuvajDugmeta.Size = new System.Drawing.Size(481, 100);
-            this.panel1IzaIZmeniSacuvajDugmeta.TabIndex = 183;
-            // 
-            // EnableNewITem
-            // 
-            this.EnableNewITem.AutoSize = true;
-            this.EnableNewITem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnableNewITem.Location = new System.Drawing.Point(275, 3);
-            this.EnableNewITem.Name = "EnableNewITem";
-            this.EnableNewITem.Size = new System.Drawing.Size(167, 24);
-            this.EnableNewITem.TabIndex = 182;
-            this.EnableNewITem.Text = "Omogući Novi Unos";
-            this.EnableNewITem.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1EnableEdit
-            // 
-            this.checkBox1EnableEdit.AutoSize = true;
-            this.checkBox1EnableEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1EnableEdit.Location = new System.Drawing.Point(38, 3);
-            this.checkBox1EnableEdit.Name = "checkBox1EnableEdit";
-            this.checkBox1EnableEdit.Size = new System.Drawing.Size(148, 24);
-            this.checkBox1EnableEdit.TabIndex = 184;
-            this.checkBox1EnableEdit.Text = "Omogući Izmene";
-            this.checkBox1EnableEdit.UseVisualStyleBackColor = true;
-            // 
-            // buttonIzmeni
-            // 
-            this.buttonIzmeni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIzmeni.Image = ((System.Drawing.Image)(resources.GetObject("buttonIzmeni.Image")));
-            this.buttonIzmeni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonIzmeni.Location = new System.Drawing.Point(38, 33);
-            this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(194, 64);
-            this.buttonIzmeni.TabIndex = 183;
-            this.buttonIzmeni.Text = "Izmeni Narudžbenicu";
-            this.buttonIzmeni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonIzmeni.UseVisualStyleBackColor = true;
-            // 
-            // buttonSacuvaj
-            // 
-            this.buttonSacuvaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSacuvaj.Image = ((System.Drawing.Image)(resources.GetObject("buttonSacuvaj.Image")));
-            this.buttonSacuvaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSacuvaj.Location = new System.Drawing.Point(248, 33);
-            this.buttonSacuvaj.Name = "buttonSacuvaj";
-            this.buttonSacuvaj.Size = new System.Drawing.Size(194, 64);
-            this.buttonSacuvaj.TabIndex = 181;
-            this.buttonSacuvaj.Text = "Sačuvaj Narudžbenicu";
-            this.buttonSacuvaj.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSacuvaj.UseVisualStyleBackColor = true;
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(0, 0);
+            this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(481, 276);
+            this.chart2.TabIndex = 0;
+            this.chart2.Text = "chart2";
             // 
             // panel2
             // 
@@ -1188,57 +1144,143 @@
             this.korisnikLabelaStatistika.TabIndex = 0;
             this.korisnikLabelaStatistika.Text = "Informacije obroju unosa od strane korisnika";
             // 
-            // splitContainer1
+            // objectListView1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 189);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.objectListView1.AllColumns.Add(this.ID);
+            this.objectListView1.AllColumns.Add(this.olvColumn1);
+            this.objectListView1.AllColumns.Add(this.olvColumn2);
+            this.objectListView1.AllColumns.Add(this.olvColumn3);
+            this.objectListView1.AllColumns.Add(this.olvColumn4);
+            this.objectListView1.AllColumns.Add(this.olvColumn5);
+            this.objectListView1.AllColumns.Add(this.olvColumn6);
+            this.objectListView1.AllColumns.Add(this.olvColumn7);
+            this.objectListView1.AllColumns.Add(this.olvColumn8);
+            this.objectListView1.AllColumns.Add(this.olvColumn9);
+            this.objectListView1.AllColumns.Add(this.olvColumn10);
+            this.objectListView1.AllColumns.Add(this.olvColumn11);
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.olvColumn1,
+            this.olvColumn2,
+            this.olvColumn3,
+            this.olvColumn4,
+            this.olvColumn5,
+            this.olvColumn6,
+            this.olvColumn7,
+            this.olvColumn8,
+            this.olvColumn9,
+            this.olvColumn10,
+            this.olvColumn11});
+            this.objectListView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectListView1.FullRowSelect = true;
+            this.objectListView1.GridLines = true;
+            this.objectListView1.HideSelection = false;
+            this.objectListView1.Location = new System.Drawing.Point(0, 24);
+            this.objectListView1.MultiSelect = false;
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(1098, 763);
+            this.objectListView1.TabIndex = 5;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
             // 
-            // splitContainer1.Panel1
+            // ID
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.chart1);
+            this.ID.AspectName = "ID";
+            this.ID.Text = "ID";
             // 
-            // splitContainer1.Panel2
+            // olvColumn1
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.chart2);
-            this.splitContainer1.Size = new System.Drawing.Size(481, 545);
-            this.splitContainer1.SplitterDistance = 265;
-            this.splitContainer1.TabIndex = 2;
+            this.olvColumn1.AspectName = "DatumNarudzbenice";
+            this.olvColumn1.Text = "DatumNarudzbenice";
             // 
-            // chart1
+            // olvColumn2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(481, 265);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.olvColumn2.AspectName = "DatumIstekaRokaNarudzbenice";
+            this.olvColumn2.Text = "DatumIstekaRokaNarudzbenice";
             // 
-            // chart2
+            // olvColumn3
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(0, 0);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(481, 276);
-            this.chart2.TabIndex = 0;
-            this.chart2.Text = "chart2";
+            this.olvColumn3.AspectName = "OkvirniSporazum";
+            this.olvColumn3.Text = "OkvirniSporazum";
+            // 
+            // olvColumn4
+            // 
+            this.olvColumn4.AspectName = "Ogranak";
+            this.olvColumn4.Text = "Ogranak";
+            // 
+            // olvColumn5
+            // 
+            this.olvColumn5.AspectName = "NazivTrafostanice";
+            this.olvColumn5.Text = "NazivTrafostanice";
+            // 
+            // olvColumn6
+            // 
+            this.olvColumn6.AspectName = "DatumFakture";
+            this.olvColumn6.Text = "DatumFakture";
+            // 
+            // olvColumn7
+            // 
+            this.olvColumn7.AspectName = "BrojFakture";
+            this.olvColumn7.Text = "BrojFakture";
+            // 
+            // olvColumn8
+            // 
+            this.olvColumn8.AspectName = "IznosBezPDV";
+            this.olvColumn8.Text = "IznosBezPDV";
+            // 
+            // olvColumn9
+            // 
+            this.olvColumn9.AspectName = "DatumPrijemEPS";
+            this.olvColumn9.Text = "DatumPrijemEPS";
+            // 
+            // olvColumn10
+            // 
+            this.olvColumn10.AspectName = "BrojIzvestaja";
+            this.olvColumn10.Text = "BrojIzvestaja";
+            // 
+            // olvColumn11
+            // 
+            this.olvColumn11.AspectName = "Napomena";
+            this.olvColumn11.FillsFreeSpace = true;
+            this.olvColumn11.Text = "Napomena";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prikazNarudzbeniceToolStripMenuItem,
+            this.prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem,
+            this.prikazFakturaToolStripMenuItem,
+            this.prikazPrimopredajnogObrazcaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 92);
+            // 
+            // prikazNarudzbeniceToolStripMenuItem
+            // 
+            this.prikazNarudzbeniceToolStripMenuItem.Name = "prikazNarudzbeniceToolStripMenuItem";
+            this.prikazNarudzbeniceToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.prikazNarudzbeniceToolStripMenuItem.Text = "Prikaz Narudzbenice";
+            // 
+            // prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem
+            // 
+            this.prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem.Name = "prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem";
+            this.prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem.Text = "Prikaz Zapisnika O Izvršenju Usluga";
+            // 
+            // prikazFakturaToolStripMenuItem
+            // 
+            this.prikazFakturaToolStripMenuItem.Name = "prikazFakturaToolStripMenuItem";
+            this.prikazFakturaToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.prikazFakturaToolStripMenuItem.Text = "Prikaz Faktura";
+            // 
+            // prikazPrimopredajnogObrazcaToolStripMenuItem
+            // 
+            this.prikazPrimopredajnogObrazcaToolStripMenuItem.Name = "prikazPrimopredajnogObrazcaToolStripMenuItem";
+            this.prikazPrimopredajnogObrazcaToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.prikazPrimopredajnogObrazcaToolStripMenuItem.Text = "Prikaz Primopredajnog Obrazca";
             // 
             // Dashboard
             // 
@@ -1262,18 +1304,19 @@
             this.tabControl1PregledUnos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2Statistika.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.panel1IzaIZmeniSacuvajDugmeta.ResumeLayout(false);
             this.panel1IzaIZmeniSacuvajDugmeta.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.tabPage2Statistika.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1391,6 +1434,11 @@
         private System.Windows.Forms.Label brojNepopunjenihNarudz;
         private System.Windows.Forms.Label brojPopunjenihNarudzbenica;
         private System.Windows.Forms.Label korisnikLabelaStatistika;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem prikazNarudzbeniceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikazZapisnikaOIzvršenjuUslugaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikazFakturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikazPrimopredajnogObrazcaToolStripMenuItem;
     }
 }
 
