@@ -83,5 +83,16 @@ namespace PurchaseOrdersManager
         {
             Environment.Exit(1);
         }
+
+        private void izmeniPutanjuDoBazeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void istorijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            History h = new History();
+            h.Show();
+        }
     }
 }
