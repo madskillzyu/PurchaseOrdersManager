@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using NarudzbenicaModels;
+using NarudzbenicaModels.Models;
+
 namespace PurchaseOrdersManager
 {
     public partial class Login : Form
@@ -15,6 +18,11 @@ namespace PurchaseOrdersManager
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            UsersModel u = new UsersModel();
         }
     }
 }

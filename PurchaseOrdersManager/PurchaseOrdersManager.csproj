@@ -150,5 +150,11 @@
     <Content Include="Resources\REFRESH.png" />
     <Content Include="Resources\srednji.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NarudzbenicaModels\NarudzbenicaModels.csproj">
+      <Project>{4a00372e-494d-4326-b4cc-10cb73a7e45c}</Project>
+      <Name>NarudzbenicaModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

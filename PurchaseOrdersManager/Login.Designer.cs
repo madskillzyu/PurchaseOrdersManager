@@ -100,6 +100,7 @@
             this.buttonLogin.TabIndex = 12;
             this.buttonLogin.Text = "Prijavi Se";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // Login
             // 
