@@ -72,5 +72,11 @@ namespace PurchaseOrdersManager
         {
 
         }
+
+        private void kontrolaNalogaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewUser n = new AddNewUser();
+            n.ShowDialog();
+        }
     }
 }

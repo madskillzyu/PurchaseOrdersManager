@@ -193,8 +193,9 @@
             // kontrolaNalogaToolStripMenuItem
             // 
             this.kontrolaNalogaToolStripMenuItem.Name = "kontrolaNalogaToolStripMenuItem";
-            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kontrolaNalogaToolStripMenuItem.Text = "Kontrola Naloga";
+            this.kontrolaNalogaToolStripMenuItem.Click += new System.EventHandler(this.kontrolaNalogaToolStripMenuItem_Click);
             // 
             // bazaToolStripMenuItem
             // 
@@ -202,7 +203,7 @@
             this.izmeniPutanjuDoBazeToolStripMenuItem,
             this.izmeniPutanjuDoFajlovaToolStripMenuItem});
             this.bazaToolStripMenuItem.Name = "bazaToolStripMenuItem";
-            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bazaToolStripMenuItem.Text = "Baza";
             // 
             // izmeniPutanjuDoBazeToolStripMenuItem
@@ -220,7 +221,7 @@
             // istorijaToolStripMenuItem
             // 
             this.istorijaToolStripMenuItem.Name = "istorijaToolStripMenuItem";
-            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.istorijaToolStripMenuItem.Text = "Istorija";
             // 
             // filteriToolStripMenuItem
