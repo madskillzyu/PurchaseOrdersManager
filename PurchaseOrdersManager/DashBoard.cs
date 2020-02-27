@@ -78,5 +78,10 @@ namespace PurchaseOrdersManager
             AddNewUser n = new AddNewUser();
             n.ShowDialog();
         }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }
