@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DataAccess\IDataConnection.cs" />
     <Compile Include="Models\FrameworkAgreementModel.cs" />
     <Compile Include="Models\PositionModel.cs" />
     <Compile Include="Models\PurchaseOrderModel.cs" />
@@ -49,8 +50,6 @@
     <Compile Include="Models\UsersModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataAccess\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
