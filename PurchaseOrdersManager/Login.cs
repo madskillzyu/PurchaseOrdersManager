@@ -18,6 +18,7 @@ namespace PurchaseOrdersManager
         public Login()
         {
             InitializeComponent();
+            this.ActiveControl = korisnickoImeValue; // prilikom prekretanja projekta polje korisnicko ime ce biti aktivno(focused) i mozemo odmah da kucamo kod
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
