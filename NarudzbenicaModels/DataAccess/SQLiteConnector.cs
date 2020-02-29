@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using NarudzbenicaModels.Models;
 using Dapper;
 using System.Data;
+using System.Windows.Forms;
 using System.Linq;
 
 namespace NarudzbenicaModels.DataAccess
@@ -92,7 +93,30 @@ namespace NarudzbenicaModels.DataAccess
 
         public PurchaseOrderModel NapraviNarudzbenicu(PurchaseOrderModel narudzbenica)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                //tring query = @"Insert into Racun (Datum, VisaTarifa, NizaTarifa, Ukupno, Info, Cena, CenaSaRacuna ) values (@Datum , @VisaTarifa, @NizaTarifa , @Ukupno , @Info, @Cena, @CenaSaRacuna);select max(ID) from Racun";
+                string query = @"Insert into [Narudzbenice] (Id, BrojNarudzbenice, DatumNarudzbenice, DatumIstekaRokaNarudzbenice, OkvirniSporazum, Ogranak, NazivTrafostanice, DatumFakture, BrojFakture, IznosBezPDV, DatumPrijemEPS, BrojIzvestaja, Napomena, IzvestajPoslat, NarudzbenicaPDF, ZapsinikOIzvrsenjuUslugaPDF, FakturaPDF, PrimopredajniObrazacPDF, Korisnik, Datum  ) values (null,@BrojNarudzbenice,@DatumNarudzbenice,@DatumIstekaRokaNarudzbenice,@OkvirniSporazum,@Ogranak,@NazivTrafostanice,@DatumFakture,@BrojFakture,@IznosBezPDV,@DatumPrijemEPS,@BrojIzvestaja,@Napomena,@IzvestajPoslat,@NarudzbenicaPDF,@ZapsinikOIzvrsenjuUslugaPDF,@FakturaPDF,@PrimopredajniObrazacPDF,@Korisnik,@Datum);select max(Id) from Narudzbenice";
+
+                //int id = connection.Query<int>(query, narudzbenica, commandType: CommandType.Text).Single();
+                //const string sql = @"INSERT INTO [Course] (Name, StudentLimit) VALUES (@Name, @StudentLimit)";
+                try
+                {
+                    //connection.Execute(query, narudzbenica, commandType: CommandType.Text);
+                    int id = connection.Query<int>(query, narudzbenica).Single();
+                    //long id = connection.Query<long>(query, racun).First();
+                    narudzbenica.ID = id;
+                    return narudzbenica;
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error); // TODO : Pocisti ovo
+                    return null;
+                }
+                //long id = connection.Query<long>(query, racun).First();
+                //narudzbenica.ID = id;
+            }
         }
 
         public PositionModel NapraviPoziciju(PositionModel pozicija)
