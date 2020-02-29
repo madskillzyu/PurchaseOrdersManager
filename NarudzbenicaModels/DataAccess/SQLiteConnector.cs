@@ -93,6 +93,7 @@ namespace NarudzbenicaModels.DataAccess
 
         public PurchaseOrderModel NapraviNarudzbenicu(PurchaseOrderModel narudzbenica)
         {
+            // TODO : preimenuj imena promenljivih u upitu za bazu i promeni ih i u bazi posto si modele pisao na engleskom
             using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
             {
                 //tring query = @"Insert into Racun (Datum, VisaTarifa, NizaTarifa, Ukupno, Info, Cena, CenaSaRacuna ) values (@Datum , @VisaTarifa, @NizaTarifa , @Ukupno , @Info, @Cena, @CenaSaRacuna);select max(ID) from Racun";
@@ -161,7 +162,15 @@ namespace NarudzbenicaModels.DataAccess
 
         public PurchaseOrderModel Update(PurchaseOrderModel narudzbenica)
         {
-            throw new NotImplementedException();
+            using(IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = @"UPDATE Narudzbenice SET BrojNarudzbenice = @BrojNarudzbenice,DatumNarudzbenice = @DatumNarudzbenice,DatumIstekaRokaNarudzbenice = @DatumIstekaRokaNarudzbenice,OkvirniSporazum = @OkvirniSporazum,Ogranak = @Ogranak,NazivTrafostanice = @NazivTrafostanice,DatumFakture = @DatumFakture,BrojFakture = @BrojFakture,IznosBezPDV = @IznosBezPDV,DatumPrijemEPS = @DatumPrijemEPS,BrojIzvestaja = @BrojIzvestaja,Napomena = @Napomena,IzvestajPoslat = @IzvestajPoslat,NarudzbenicaPDF = @NarudzbenicaPDF,ZapsinikOIzvrsenjuUslugaPDF = @ZapsinikOIzvrsenjuUslugaPDF,FakturaPDF = @FakturaPDF,PrimopredajniObrazacPDF = @PrimopredajniObrazacPDF,Korisnik = @Korisnik WHERE Id = @ID;";
+                //cnn.Execute("update Table set val = @val where Id = @id", new { val, id = 1 });
+                //string query = "update Racun set @Datum = '" + DateTimeSQLite(racun.Datum) + "', @VisaTarifa = '" + racun.VisaTarifa + "', @NizaTarifa = '" + racun.NizaTarifa + "', @Ukupno = '" + racun.Ukupno + "', @Info = '" + racun.Info + "', @Cena = '" + racun.Cena + "', @CenaSaRacuna = '" + racun.CenaSaRacuna + "' where ID = @ID;";
+                var i = connection.Execute(query, narudzbenica);
+                narudzbenica.ID = i;
+                return narudzbenica;
+            }
         }
     }
 }
