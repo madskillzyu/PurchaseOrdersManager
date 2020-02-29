@@ -15,22 +15,29 @@ namespace NarudzbenicaModels.DataAccess
     {
         private const string db = "NarudzbenicaDatabase"; // ime baze
 
-        public bool DatabaseEmpty()
-        {
-            using (ID)
-            {
-
-            }
-        }
 
         public UsersModel CreateUser(UsersModel u)
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Checking if database is empty
+        /// </summary>
+        /// <returns></returns>
         public bool DatabaseEmpty()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                var number = 0;
+                //string query1 = "select exists (select 1 from " + tabela + ");";
+                string query = "select exists (select 1 from Korisnici);";
+                number = connection.Query<int>(query).Single();
+                if (number == 0)
+                {
+                    return true;
+                }
+                else return false;
+            }
         }
 
         public DateTime DateOfFirstInsertInDatabase()
