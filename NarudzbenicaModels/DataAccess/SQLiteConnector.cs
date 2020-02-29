@@ -5,11 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 using NarudzbenicaModels.Models;
+using Dapper;
+using System.Data;
+using System.Linq;
 
 namespace NarudzbenicaModels.DataAccess
 {
     public class SQLiteConnector : IDataConnection
     {
+        private const string db = "NarudzbenicaDatabase"; // ime baze
+
+        public bool DatabaseEmpty()
+        {
+            using ()
+            {
+
+            }
+        }
+
         public UsersModel CreateUser(UsersModel u)
         {
             throw new NotImplementedException();
