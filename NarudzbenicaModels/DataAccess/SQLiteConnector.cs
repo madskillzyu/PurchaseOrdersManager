@@ -17,7 +17,7 @@ namespace NarudzbenicaModels.DataAccess
 
         public bool DatabaseEmpty()
         {
-            using ()
+            using (ID)
             {
 
             }
