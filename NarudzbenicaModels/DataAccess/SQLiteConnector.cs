@@ -152,7 +152,11 @@ namespace NarudzbenicaModels.DataAccess
 
         public PurchaseOrderModel GetOne(int id)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select * from Narudzbenice where Id = @ID";
+                return connection.QuerySingle<PurchaseOrderModel>(query, new { Id = id });
+            }
         }
 
         public PurchaseOrderModel NapraviNarudzbenicu(PurchaseOrderModel narudzbenica)
