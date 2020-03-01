@@ -207,9 +207,19 @@ namespace NarudzbenicaModels.DataAccess
             }
         }
 
+        /// <summary>
+        /// Parametar nam sluzi da bi birali izmedju poslatih i neposlatih izvestaja
+        /// </summary>
+        /// <param name="i"> 0 ili 1 </param>
+        /// <returns></returns>
         public int SumaIzvestajPosla(int i)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select count() from Narudzbenice where IzvestajPoslat = " + i + ";";
+                //return connection.QuerySingle<int>(query, new { ID = id });
+                return connection.ExecuteScalar<int>(query);
+            }
         }
 
         public int SumaKompletiranih()
