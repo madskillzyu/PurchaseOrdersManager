@@ -268,7 +268,12 @@ namespace NarudzbenicaModels.DataAccess
 
         public int UkupanBrojUnosaZaKorisnika(string korisnik)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select count() from Narudzbenice where Korisnik = '" + korisnik + "';";
+                //return connection.QuerySingle<int>(query, new { ID = id });
+                return connection.ExecuteScalar<int>(query);
+            }
         }
 
         public PurchaseOrderModel Update(PurchaseOrderModel narudzbenica)
