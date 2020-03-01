@@ -190,7 +190,12 @@ namespace NarudzbenicaModels.DataAccess
 
         public PositionModel NapraviPoziciju(PositionModel pozicija)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = @"Insert into [Pozicije](PozicijeId,Narudzbenica_ID, ImePozicije) values  (null, @Narudzbenica_ID, @ImePozicije);";
+                connection.Execute(query, pozicija, commandType: CommandType.Text);
+                return pozicija;
+            }
         }
 
         public List<PurchaseOrederPositionModel> NarudbeniceSaPozicijam()
