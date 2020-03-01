@@ -58,7 +58,20 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAll()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select * from Narudzbenice";
+                try
+                {
+                    return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
         }
 
         public List<PurchaseOrderModel> GetAllForThisYear(string y)
