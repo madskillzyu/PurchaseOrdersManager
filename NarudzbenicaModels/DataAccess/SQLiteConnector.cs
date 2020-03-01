@@ -68,7 +68,22 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAllFromLastMonth(string m)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                //string query = "select * from Narudzbenice where Datum like '" + mesec + "-%-% %'";
+                //string query = "SELECT * FROM Narudzbenice WHERE strftime('%m', Datum) = '" + mesec + "'";
+                string query = "SELECT * FROM Narudzbenice WHERE strftime('%Y %m', Datum) = '" + DateTime.Now.Year.ToString() + " " + mesec + "'";
+                try
+                {
+                    return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
         }
 
         public List<PurchaseOrderModel> GetAllOlderThen(int days)
