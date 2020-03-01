@@ -224,7 +224,31 @@ namespace NarudzbenicaModels.DataAccess
 
         public int SumaKompletiranih()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = @"select count() From Narudzbenice where
+                               Id !="""" 
+                               AND BrojNarudzbenice !="""" 
+                               AND DatumNarudzbenice !="""" 
+                               AND DatumIstekaRokaNarudzbenice !="""" 
+                               AND OkvirniSporazum !="""" 
+                               AND Ogranak !="""" 
+                               AND NazivTrafostanice !="""" 
+                               AND DatumFakture !="""" 
+                               AND BrojFakture !="""" 
+                               AND IznosBezPDV !="""" 
+                               AND DatumPrijemEPS !="""" 
+                               AND BrojIzvestaja !="""" 
+                               AND IzvestajPoslat = 1 
+                               AND NarudzbenicaPDF !=""""
+                               AND ZapsinikOIzvrsenjuUslugaPDF !="""" 
+                               AND FakturaPDF !="""" 
+                               AND PrimopredajniObrazacPDF !="""" 
+                               AND Korisnik !="""" 
+                               AND Datum != """";";
+                //return connection.QuerySingle<int>(query, new { ID = id });
+                return connection.ExecuteScalar<int>(query);
+            }
         }
 
         public int UkupanBorjUNosaOvogMeseca(string mesec)
