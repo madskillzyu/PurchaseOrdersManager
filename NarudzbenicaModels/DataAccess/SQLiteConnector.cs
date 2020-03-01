@@ -258,7 +258,12 @@ namespace NarudzbenicaModels.DataAccess
 
         public int UkupanBrojUnosa()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select count() from Narudzbenice";
+                //return connection.QuerySingle<int>(query, new { ID = id });
+                return connection.ExecuteScalar<int>(query);
+            }
         }
 
         public int UkupanBrojUnosaZaKorisnika(string korisnik)
