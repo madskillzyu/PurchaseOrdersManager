@@ -119,7 +119,11 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAllWhereIzvestajPoslat(int poslat, string y)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "SELECT * FROM Narudzbenice where IzvestajPoslat = " + poslat + " AND strftime('%Y', Datum) = '" + y + "';";
+                return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
+            }
         }
 
         public PurchaseOrderModel GetOne(int id)
