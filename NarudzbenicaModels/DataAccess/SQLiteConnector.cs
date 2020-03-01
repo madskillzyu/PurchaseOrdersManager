@@ -196,7 +196,11 @@ namespace NarudzbenicaModels.DataAccess
 
         public void RemoveUser(int id)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "delete from Korisnici where ID = @ID";
+                int i = connection.Execute(query, new { id = id });
+            }
         }
 
         public int SumaIzvestajPosla(int i)
