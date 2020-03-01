@@ -125,7 +125,20 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<UsersModel> GetAllUsers()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "select * from Korisnici";
+                try
+                {
+                    return (List<UsersModel>)connection.Query<UsersModel>(query);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
         }
 
         public List<PurchaseOrderModel> GetAllWhereIzvestajPoslat(int poslat, string y)
