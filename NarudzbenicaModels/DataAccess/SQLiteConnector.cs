@@ -19,7 +19,18 @@ namespace NarudzbenicaModels.DataAccess
 
         public UsersModel CreateUser(UsersModel u)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                //tring query = @"Insert into Racun (Datum, VisaTarifa, NizaTarifa, Ukupno, Info, Cena, CenaSaRacuna ) values (@Datum , @VisaTarifa, @NizaTarifa , @Ukupno , @Info, @Cena, @CenaSaRacuna);select max(ID) from Racun";
+                string query = @"Insert into [Korisnici](ID, KorisnickoIme, KorisnickaLozinka, Privilegija, Datum) values  (null, @KorisnickoIme, @KorisnickaLozinka, @Privilegija, @Datum);";
+
+                //int id = connection.Query<int>(query, narudzbenica, commandType: CommandType.Text).Single();
+                //const string sql = @"INSERT INTO [Course] (Name, StudentLimit) VALUES (@Name, @StudentLimit)";
+                connection.Execute(query, u, commandType: CommandType.Text);
+                //long id = connection.Query<long>(query, racun).First();
+                //narudzbenica.ID = id;
+                return u;
+            }
         }
         /// <summary>
         /// Checking if database is empty
