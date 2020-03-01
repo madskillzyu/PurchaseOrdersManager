@@ -73,7 +73,11 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAllOlderThen(int days)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "SELECT * FROM Narudzbenice WHERE(julianday('now') - julianday(DatumNarudzbenice)) <= " + days + "; ";
+                return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
+            }
         }
 
         public List<UsersModel> GetAllUsers()
