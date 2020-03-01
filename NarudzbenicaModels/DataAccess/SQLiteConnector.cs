@@ -253,7 +253,20 @@ namespace NarudzbenicaModels.DataAccess
 
         public int UkupanBorjUNosaOvogMeseca(string mesec)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "SELECT count() FROM Narudzbenice WHERE strftime('%Y %m', Datum) = '" + DateTime.Now.Year.ToString() + " " + mesec + "'";
+                try
+                {
+                    return connection.ExecuteScalar<int>(query);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 0;
+                }
+            }
         }
 
         public int UkupanBrojUnosa()
