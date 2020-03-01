@@ -76,7 +76,11 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAllForThisYear(string y)
         {
-            throw new NotImplementedException();
+            using(IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            {
+                string query = "SELECT * FROM Narudzbenice WHERE strftime('%Y', Datum) = '" + DateTime.Now.Year.ToString() + "'";
+                return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
+            }
         }
 
         public List<PurchaseOrderModel> GetAllFromLastMonth(string m)
