@@ -16,7 +16,7 @@ namespace NarudzbenicaModels.DataAccess
         List<PurchaseOrderModel> GetAllFromLastMonth(string m);
 
 
-        List<PurchaseOrederPositionModel> NarudbeniceSaPozicijam();
+       // List<PurchaseOrederPositionModel> NarudbeniceSaPozicijam();
 
         List<PurchaseOrderModel> GetAllOlderThen(int days);
         List<PurchaseOrderModel> GetAllForThisYear(string y);

@@ -87,14 +87,14 @@ namespace NarudzbenicaModels.DataAccess
 
         public List<PurchaseOrderModel> GetAllForThisYear(string y)
         {
-            using(IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+            using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
             {
                 string query = "SELECT * FROM Narudzbenice WHERE strftime('%Y', Datum) = '" + DateTime.Now.Year.ToString() + "'";
                 return (List<PurchaseOrderModel>)connection.Query<PurchaseOrderModel>(query);
             }
         }
 
-        public List<PurchaseOrderModel> GetAllFromLastMonth(string m)
+        public List<PurchaseOrderModel> GetAllFromLastMonth(string mesec)
         {
             using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
             {
@@ -198,10 +198,113 @@ namespace NarudzbenicaModels.DataAccess
             }
         }
 
-        public List<PurchaseOrederPositionModel> NarudbeniceSaPozicijam()
-        {
-            throw new NotImplementedException();
-        }
+        //public List<PurchaseOrederPositionModel> NarudbeniceSaPozicijam()
+        //{
+        //    // TODO: ovde sis tao 01.03.2020 u 14:34
+        //    PurchaseOrederPositionModel p = new PurchaseOrederPositionModel();
+        //    List<PurchaseOrederPositionModel> modeli = new List<PurchaseOrederPositionModel>();
+        //    using (IDbConnection connection = new System.Data.SQLite.SQLiteConnection(GlobalConfig.CnnString()))
+        //    {
+
+        //        //string query = "SELECT * FROM Narudzbenice INNER JOIN Pozicije on Pozicije.Narudzbenica_ID = Narudzbenice.ID";
+        //        string query1 = "SELECT * FROM Narudzbenice; SELECT * FROM Pozicije";
+        //        //return connection.QuerySingle<NarudzbenicaModel>(query, new { Id = id });
+        //        List<PurchaseOrderModel> nardudzbenice = new List<PurchaseOrderModel>();
+        //        List<PositionModel> pozicije = new List<PositionModel>();
+        //        List<PositionModel> jednaPozicija = new List<PositionModel>();
+        //        var multi = connection.QueryMultiple(query1, null);
+
+        //        nardudzbenice = multi.Read<PurchaseOrderModel>().ToList();
+        //        pozicije = multi.Read<PositionModel>().ToList();
+        //        foreach (PurchaseOrderModel narudzbenica in nardudzbenice)
+        //        {
+        //            foreach (PositionModel po in pozicije)
+        //            {
+        //                if (narudzbenica.ID == po.PozicijeId)
+        //                {
+        //                    jednaPozicija.Add(po);
+        //                }
+        //            }
+        //            modeli.Add(new NarudzbenicaPozicijaModel(narudzbenica.ID,
+        //                narudzbenica.BrojNarudzbenice,
+        //                narudzbenica.DatumNarudzbenice,
+        //                narudzbenica.DatumIstekaRokaNarudzbenice,
+        //                narudzbenica.OkvirniSporazum,
+        //                narudzbenica.Ogranak,
+        //                narudzbenica.NazivTrafostanice,
+        //                narudzbenica.DatumFakture,
+        //                narudzbenica.BrojFakture,
+        //                narudzbenica.IznosBezPDV,
+        //                narudzbenica.DatumPrijemEPS,
+        //                narudzbenica.BrojIzvestaja,
+        //                narudzbenica.Napomena,
+        //                narudzbenica.IzvestajPoslat,
+        //                narudzbenica.NarudzbenicaPDF,
+        //                narudzbenica.ZapsinikOIzvrsenjuUslugaPDF,
+        //                narudzbenica.FakturaPDF,
+        //                narudzbenica.PrimopredajniObrazacPDF,
+        //                narudzbenica.Korisnik, narudzbenica.Datum, jednaPozicija));
+        //            //p.Id = narudzbenica.ID;
+        //            //p.BrojNarudzbenice = narudzbenica.BrojNarudzbenice;
+        //            //p.DatumNarudzbenice = narudzbenica.DatumNarudzbenice;
+        //            //p.DatumIstekaRokaNarudzbenice = narudzbenica.DatumIstekaRokaNarudzbenice;
+        //            //p.OkvirniSporazum = narudzbenica.OkvirniSporazum;
+        //            //p.Ogranak = narudzbenica.Ogranak;
+        //            //p.NazivTrafostanice = narudzbenica.NazivTrafostanice;
+        //            //p.DatumFakture = narudzbenica.DatumFakture;
+        //            //p.BrojFakture = narudzbenica.BrojFakture;
+        //            //p.IznosBezPDV = narudzbenica.IznosBezPDV;
+        //            //p.DatumPrijemEPS = narudzbenica.DatumPrijemEPS;
+        //            //p.BrojIzvestaja = narudzbenica.BrojIzvestaja;
+        //            //p.Napomena = narudzbenica.Napomena;
+        //            //p.IzvestajPoslat = narudzbenica.IzvestajPoslat;
+        //            //p.NarudzbenicaPDF = narudzbenica.NarudzbenicaPDF;
+        //            //p.ZapsinikOIzvrsenjuUslugaPDF = narudzbenica.ZapsinikOIzvrsenjuUslugaPDF;
+        //            //p.FakturaPDF = narudzbenica.FakturaPDF;
+        //            //p.PrimopredajniObrazacPDF = narudzbenica.PrimopredajniObrazacPDF;
+        //            //p.Korisnik = narudzbenica.Korisnik;
+        //            //p.Datum = narudzbenica.Datum;
+
+        //        }
+        //        //var invoice = multi.Read<Invoice>().First();
+        //        //var invoiceItems = multi.Read<InvoiceItem>().ToList();
+        //        //try
+        //        //{
+        //        //    //return (List<NarudzbenicaPozicijaModel>)connection.Query<NarudzbenicaPozicijaModel>(query);
+        //        //    //var inerJoin = connection.Query<NarudzbenicaPozicijaModel, PozicijaModel, NarudzbenicaPozicijaModel>(query,(narudzbenicapozicijamodel, pozicijamodel) => pozicijamodel)
+        //        //}
+        //        //catch (Exception ex)
+        //        //{
+
+        //        //    MessageBox.Show("Doslo je do greske, detaljne informaciju su: " + ex, "Greska sa bazom!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        //    return null;
+        //        //}
+        //        // Step 1: Use Dapper to return the  flat result as a Dynamic.
+        //        //dynamic test = connection.Query<dynamic>(query);
+
+        //        //NarudzbenicaPozicijaModel pozicija = new NarudzbenicaPozicijaModel();
+        //        //pozicija.Id = test.Id;// d.GetType().GetProperty("value2").GetValue(d, null);
+        //        //pozicija.Id = test.GetType().GetProperty("Id").GetValue(db, null);
+        //        //pozicija.BrojNarudzbenice = test.BrojNarudzbenice;
+
+
+
+        //        // Step 2: Use Slapper.Automapper for mapping to the POCO Entities.
+        //        // - IMPORTANT: Let Slapper.Automapper know how to do the mapping;
+        //        //   let it know the primary key for each POCO.
+        //        // - Must also use underscore notation ("_") to name parameters;
+        //        //   see Slapper.Automapper docs.
+        //        //Slapper.AutoMapper.Configuration.AddIdentifiers(typeof(NarudzbenicaPozicijaModel), new List<string> { "Id" });
+        //        //Slapper.AutoMapper.Configuration.AddIdentifiers(typeof(PozicijaModel), new List<string> { "PozicijeId" });
+
+        //        //p = (Slapper.AutoMapper.MapDynamic<NarudzbenicaPozicijaModel>(test) as IEnumerable<NarudzbenicaPozicijaModel>).ToList();
+        //        //var testContact = (Slapper.AutoMapper.MapDynamic<NarudzbenicaPozicijaModel>(test) as IEnumerable<NarudzbenicaPozicijaModel>).ToList();
+
+        //        return modeli;
+        //    }
+        //}
+    
+    
 
         public void RemoveUser(int id)
         {

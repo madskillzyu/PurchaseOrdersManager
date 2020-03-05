@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NarudzbenicaModels.Models
 {
-    class PurchaseOrederPositionModel
+    public class PurchaseOrederPositionModel
     {
 
         public int ID { get; set; }
