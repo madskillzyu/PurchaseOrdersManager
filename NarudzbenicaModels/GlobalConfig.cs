@@ -48,16 +48,16 @@ namespace NarudzbenicaModels
             //return @"Data Source=C:/Database/BazaNarudzbenica/sqliteNarudzbenice.db; Version=3;";
             //return @"Data Source=C:/Users/Korisnik/Documents/BazaNarudzbenica/sqliteNarudzbenice.db; Version=3;"; 
 
-            //if (!File.Exists(System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db")))
-            //{
-            //    return null;
-            //}
-            //else
-            //{
-            //    string path = System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db");
-            //    return @"Data Source=" + path + "; Version=3;";
+            if (!File.Exists(System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db")))
+            {
+                return null;
+            }
+            else
+            {
+                string path = System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db");
+                return @"Data Source=" + path + "; Version=3;";
 
-            //}
+            }
 
         }
     }
