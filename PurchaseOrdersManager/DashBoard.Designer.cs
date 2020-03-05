@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.podešavanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontrolaNalogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -193,7 +193,7 @@
             // kontrolaNalogaToolStripMenuItem
             // 
             this.kontrolaNalogaToolStripMenuItem.Name = "kontrolaNalogaToolStripMenuItem";
-            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontrolaNalogaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.kontrolaNalogaToolStripMenuItem.Text = "Kontrola Naloga";
             this.kontrolaNalogaToolStripMenuItem.Click += new System.EventHandler(this.kontrolaNalogaToolStripMenuItem_Click);
             // 
@@ -203,7 +203,7 @@
             this.izmeniPutanjuDoBazeToolStripMenuItem,
             this.izmeniPutanjuDoFajlovaToolStripMenuItem});
             this.bazaToolStripMenuItem.Name = "bazaToolStripMenuItem";
-            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bazaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.bazaToolStripMenuItem.Text = "Baza";
             // 
             // izmeniPutanjuDoBazeToolStripMenuItem
@@ -222,7 +222,7 @@
             // istorijaToolStripMenuItem
             // 
             this.istorijaToolStripMenuItem.Name = "istorijaToolStripMenuItem";
-            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.istorijaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.istorijaToolStripMenuItem.Text = "Istorija";
             this.istorijaToolStripMenuItem.Click += new System.EventHandler(this.istorijaToolStripMenuItem_Click);
             // 
@@ -402,13 +402,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // bugReportFeatureToolStripMenuItem
             // 
             this.bugReportFeatureToolStripMenuItem.Name = "bugReportFeatureToolStripMenuItem";
-            this.bugReportFeatureToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.bugReportFeatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bugReportFeatureToolStripMenuItem.Text = "Bug Report/Feature";
             // 
             // statusStrip1
@@ -936,34 +937,34 @@
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(481, 265);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(0, 0);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(481, 276);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";

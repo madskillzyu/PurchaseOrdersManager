@@ -60,7 +60,7 @@ namespace NarudzbenicaModels.Models
 
         }
         /// <summary>
-        /// Construktor
+        /// Constructor
         /// </summary>
         public PurchaseOrderModel()
         {

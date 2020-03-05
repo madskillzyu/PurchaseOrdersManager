@@ -28,7 +28,10 @@ namespace NarudzbenicaModels
             SQLiteConnector sqlite = new SQLiteConnector();
             Connection = sqlite;
         }
-
+        /// <summary>
+        /// Returning Data source path saved into settings.settings file
+        /// </summary>
+        /// <returns></returns>
         public static string CnnString()
         {
 
@@ -48,13 +51,13 @@ namespace NarudzbenicaModels
             //return @"Data Source=C:/Database/BazaNarudzbenica/sqliteNarudzbenice.db; Version=3;";
             //return @"Data Source=C:/Users/Korisnik/Documents/BazaNarudzbenica/sqliteNarudzbenice.db; Version=3;"; 
 
-            if (!File.Exists(System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db")))
+            if (!File.Exists(System.IO.Path.Combine(NarudzbenicaModels.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db")))
             {
                 return null;
             }
             else
             {
-                string path = System.IO.Path.Combine(PurchaseOrderModel.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db");
+                string path = System.IO.Path.Combine(NarudzbenicaModels.Properties.Settings.Default.DatabaseaPath, "sqliteNarudzbenice.db");
                 return @"Data Source=" + path + "; Version=3;";
 
             }

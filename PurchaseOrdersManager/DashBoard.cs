@@ -94,5 +94,11 @@ namespace PurchaseOrdersManager
             History h = new History();
             h.Show();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 a = new AboutBox1();
+            a.ShowDialog();
+        }
     }
 }
