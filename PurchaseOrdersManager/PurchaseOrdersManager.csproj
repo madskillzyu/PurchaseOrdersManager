@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>megabytelogog400x400.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
       <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
@@ -80,6 +83,7 @@
     <Compile Include="EmailToDeveloper.Designer.cs">
       <DependentUpon>EmailToDeveloper.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpClasess\EmailLogic.cs" />
     <Compile Include="History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -139,11 +144,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="file-document-box-multiple.ico" />
+    <Content Include="megabytelogog400x400.ico" />
     <Content Include="Resources\circle-edit-outline.png" />
     <Content Include="Resources\content-save %282%29.png" />
     <Content Include="Resources\file-document-box-multiple.png" />
     <Content Include="Resources\LIDAC LOGO.png" />
     <Content Include="Resources\mail.png" />
+    <None Include="Resources\megabytelogog400x400.png" />
     <Content Include="Resources\minus.png" />
     <Content Include="Resources\open-in-app.png" />
     <Content Include="Resources\plus.png" />

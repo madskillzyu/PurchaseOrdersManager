@@ -100,5 +100,11 @@ namespace PurchaseOrdersManager
             AboutBox1 a = new AboutBox1();
             a.ShowDialog();
         }
+
+        private void bugReportFeatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmailToDeveloper d = new EmailToDeveloper(user);
+            d.ShowDialog();
+        }
     }
 }

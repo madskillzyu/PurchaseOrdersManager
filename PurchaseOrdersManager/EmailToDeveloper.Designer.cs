@@ -98,6 +98,7 @@
             this.buttonSendMail.TabIndex = 16;
             this.buttonSendMail.Text = "Send Email";
             this.buttonSendMail.UseVisualStyleBackColor = true;
+            this.buttonSendMail.Click += new System.EventHandler(this.buttonSendMail_Click);
             // 
             // textBoxBody
             // 
